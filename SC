@@ -1,0 +1,2848 @@
+
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h> // Use the appropriate library for your display
+#include <BitMaps.h>
+#include "synth_chaosnoise.h"
+#include <StevesAwesomeSamplePlayer.h>
+#include "synth_bytebeat.h"
+
+
+#include <Audio.h>
+#include <Wire.h>
+#include <SPI.h>
+#include <SD.h>
+#include <SerialFlash.h>
+
+// GUItool: begin automatically generated code
+AudioSynthWaveform       waveform2;      //xy=1181.9445457458496,1793.0556688308716
+AudioSynthWaveform       waveform1;      //xy=1183.6112022399902,1741.3890142440796
+AudioSynthWaveform       waveform3;      //xy=1183.6112098693848,1841.3890047073364
+AudioSynthWaveform       waveform4;      //xy=1188.611197153727,1896.3890301386514
+StevesAwesomeSamplePlayer samplePlayer;      //xy=1305.6188430786133,1289.6547870635986
+AudioPlaySdWav           playSdWav2;     //xy=1311.1664276123047,1377.6666736602783
+AudioEffectEnvelope      envelope2;      //xy=1355.4167442321777,1799.1668577194214
+AudioEffectEnvelope      envelope4;      //xy=1355.4167098999023,1892.9168615341187
+AudioEffectEnvelope      envelope1;      //xy=1356.6667747497559,1755.4168577194214
+AudioEffectEnvelope      envelope3;      //xy=1357.9167442321777,1841.66685962677
+AudioAmplifier           amp3;           //xy=1442.3332023620605,1262.8334035873413
+AudioSynthChaosNoise chaosnoise;          //xy=1447.2221031188965,980.8333282470703
+AudioSynthNoiseWhite     noise1;         //xy=1449.999870300293,931.4999523162842
+AudioAmplifier           amp7;           //xy=1460.166431427002,1373.666660308838
+AudioSynthWaveformSine   sine2;          //xy=1499.9997596740723,653.6666288375854
+AudioMixer4              mixer3;         //xy=1531.666706085205,1820.4168577194214
+AudioAnalyzePeak         peak2;          //xy=1559.3331298828125,1199.8333415985107
+AudioAnalyzePeak         peak6;          //xy=1634.1664276123047,1399.333330154419
+AudioMixer4              mixer12;        //xy=1644.4997863769531,974.8332386016846
+AudioSynthWaveformSineModulated sine_fm1;       //xy=1721.6664199829102,657.9999723434448
+AudioMixer4              mixer5;         //xy=1728.1664657592773,1313.333303451538
+AudioMixer4              mixer4;         //xy=1732.1665573120117,1230.6667079925537
+AudioSynthWaveformPWM    pwm1;           //xy=1759.9999961853027,809.4999847412109
+AudioSynthWaveformSine   sine1;          //xy=1786.3331413269043,702.1428747177124
+AudioEffectDelay         delay4; //xy=1786,1891.666748046875
+AudioFilterStateVariable filter1;        //xy=1892.6665000915527,637.9999647140503
+AudioMixer4              mixer10;        //xy=1901.4998397827148,509.83326721191406
+AudioMixer4              mixer16; //xy=1921.0000762939453,1861.1111068725586
+AudioMixer4              mixer11;        //xy=1939.1664924621582,333.16665840148926
+AudioMixer4              mixer17;        //xy=1966.111099243164,1604.5555534362793
+AudioAmplifier           amp2;           //xy=2130.333339691162,1704.1666469573975
+AudioAmplifier           amp1;           //xy=2207.6666984558105,887.8333225250244
+AudioAmplifier           amp5;           //xy=2209.666534423828,949.4999713897705
+AudioSynthWaveformModulated waveformMod3;   //xy=2297.2220611572266,2248.1111011505127
+AudioAnalyzePeak         peak3;          //xy=2326.3334197998047,1842.166576385498
+AudioMixer4              mixer13;        //xy=2393.8889503479004,977.5000514984131
+AudioSynthWaveformSine   sine7;          //xy=2428.555450439453,2476.666648864746
+AudioSynthWaveformSine   sine3;          //xy=2433.555435180664,2271.6666431427
+AudioSynthWaveformSine   sine6;          //xy=2434.2697372436523,2385.5239219665527
+AudioSynthWaveformModulated waveformMod1;   //xy=2546.500202178955,2169.9999375343323
+AudioAnalyzePeak         peak5;          //xy=2563.333267211914,831.8333206176758
+AudioSynthWaveformModulated waveformMod5;   //xy=2607.5556869506836,2416.88881111145
+AudioSynthWaveformModulated waveformMod6;   //xy=2607.5556869506836,2476.88881111145
+AudioSynthWaveformModulated waveformMod4;   //xy=2611.5556869506836,2274.88881111145
+AudioAmplifier           amp4;           //xy=2681.6664695739746,1659.6665668487549
+AudioSynthWaveformModulated waveformMod2;   //xy=2754.9999504089355,2167.1667261123657
+AudioMixer4              mixer18;        //xy=2803.5554428100586,2340.6666431427
+AudioAnalyzePeak         peak1;          //xy=2839.000759124756,907.3334426879883
+AudioAnalyzePeak         peak4;          //xy=2853.3332328796387,1708.8332538604736
+AudioMixer4              mixer1;         //xy=2884.5713806152344,1047.5714874267578
+AudioMixer4              mixer2;         //xy=2884.9998474121094,1217.6666107177734
+AudioEffectEnvelope      envelope5;      //xy=2906.3333473205566,2108.0554428100586
+AudioEffectChorus        chorus2;        //xy=3150.611024220784,1288.6110785802205
+AudioEffectChorus        chorus1;        //xy=3155.6109352111816,993.6110963821411
+AudioEffectFreeverb      freeverb2;      //xy=3162.333282470703,1349.6666641235352
+AudioEffectFreeverb      freeverb1;      //xy=3176.166721343994,1053.4999732971191
+AudioEffectDelay         delay3;         //xy=3176.2778549194336,2318.2777252197266
+AudioMixer4              mixer9;         //xy=3271.6111068725586,2028.0555572509766
+AudioMixer4              mixer8;         //xy=3347.2778549194336,2309.7220611572266
+AudioMixer4              mixer7;         //xy=3463.8890266418457,1187.222255706787
+AudioMixer4              mixer6;         //xy=3466.111186981201,1117.2223434448242
+AudioMixer4              mixer15; //xy=3973.944404602051,1099.44429397583
+AudioMixer4              mixer14;        //xy=3976.6118788719177,1225.1111640930176
+AudioFilterBiquad        biquad2; //xy=4189.3882484436035,1220.1107969284058
+AudioFilterBiquad        biquad1;        //xy=4204.0559730529785,1102.7777881622314
+AudioOutputI2S           i2s1;           //xy=4450.571601867676,1163.1426577568054
+AudioConnection          patchCord1(waveform2, envelope2);
+AudioConnection          patchCord2(waveform1, envelope1);
+AudioConnection          patchCord3(waveform3, envelope3);
+AudioConnection          patchCord4(waveform4, envelope4);
+AudioConnection          patchCord5(samplePlayer, 0, amp3, 0);
+AudioConnection          patchCord6(playSdWav2, 0, amp7, 0);
+AudioConnection          patchCord7(envelope2, 0, mixer3, 1);
+AudioConnection          patchCord8(envelope4, 0, mixer3, 3);
+AudioConnection          patchCord9(envelope1, 0, mixer3, 0);
+AudioConnection          patchCord10(envelope3, 0, mixer3, 2);
+AudioConnection          patchCord11(amp3, peak2);
+AudioConnection          patchCord12(amp3, 0, mixer4, 0);
+AudioConnection          patchCord13(amp3, 0, mixer5, 0);
+AudioConnection          patchCord14(chaosnoise, 0, mixer12, 1);
+AudioConnection          patchCord15(chaosnoise, 0, mixer18, 3);
+AudioConnection          patchCord16(noise1, 0, mixer12, 0);
+AudioConnection          patchCord17(amp7, 0, mixer4, 1);
+AudioConnection          patchCord18(amp7, 0, mixer5, 1);
+AudioConnection          patchCord19(amp7, peak6);
+AudioConnection          patchCord20(sine2, 0, mixer10, 0);
+AudioConnection          patchCord21(mixer3, delay4);
+AudioConnection          patchCord22(mixer3, 0, mixer17, 0);
+AudioConnection          patchCord23(mixer12, pwm1);
+AudioConnection          patchCord24(sine_fm1, 0, filter1, 0);
+AudioConnection          patchCord25(mixer5, 0, mixer2, 1);
+AudioConnection          patchCord26(mixer4, 0, mixer1, 1);
+AudioConnection          patchCord27(pwm1, amp5);
+AudioConnection          patchCord28(sine1, 0, filter1, 1);
+AudioConnection          patchCord29(delay4, 0, mixer16, 0);
+AudioConnection          patchCord30(delay4, 1, mixer16, 1);
+AudioConnection          patchCord31(delay4, 2, mixer16, 2);
+AudioConnection          patchCord32(delay4, 3, mixer16, 3);
+AudioConnection          patchCord33(filter1, 1, mixer10, 1);
+AudioConnection          patchCord34(filter1, 2, mixer11, 1);
+AudioConnection          patchCord35(filter1, 2, amp1, 0);
+AudioConnection          patchCord36(mixer10, sine_fm1);
+AudioConnection          patchCord37(mixer16, 0, mixer17, 1);
+AudioConnection          patchCord38(mixer11, 0, mixer10, 2);
+AudioConnection          patchCord39(mixer17, amp2);
+AudioConnection          patchCord40(amp2, peak3);
+AudioConnection          patchCord41(amp2, 0, mixer1, 2);
+AudioConnection          patchCord42(amp2, 0, mixer2, 2);
+AudioConnection          patchCord43(amp1, peak5);
+AudioConnection          patchCord44(amp1, 0, mixer13, 0);
+AudioConnection          patchCord45(amp5, 0, mixer13, 1);
+AudioConnection          patchCord46(waveformMod3, 0, waveformMod1, 0);
+AudioConnection          patchCord47(waveformMod3, 0, waveformMod2, 1);
+AudioConnection          patchCord48(mixer13, 0, mixer1, 0);
+AudioConnection          patchCord49(mixer13, 0, mixer2, 0);
+AudioConnection          patchCord50(mixer13, peak1);
+AudioConnection          patchCord51(sine7, 0, waveformMod6, 0);
+AudioConnection          patchCord52(sine3, 0, waveformMod4, 0);
+AudioConnection          patchCord53(sine6, 0, waveformMod5, 0);
+AudioConnection          patchCord54(waveformMod1, 0, waveformMod2, 0);
+AudioConnection          patchCord55(waveformMod5, 0, mixer18, 1);
+AudioConnection          patchCord56(waveformMod6, 0, mixer18, 2);
+AudioConnection          patchCord57(waveformMod4, 0, mixer18, 0);
+AudioConnection          patchCord58(amp4, peak4);
+AudioConnection          patchCord59(amp4, 0, mixer2, 3);
+AudioConnection          patchCord60(amp4, 0, mixer1, 3);
+AudioConnection          patchCord61(waveformMod2, envelope5);
+AudioConnection          patchCord62(mixer18, 0, mixer9, 2);
+AudioConnection          patchCord63(mixer1, 0, mixer6, 0);
+AudioConnection          patchCord64(mixer1, chorus1);
+AudioConnection          patchCord65(mixer1, freeverb1);
+AudioConnection          patchCord66(mixer2, 0, mixer7, 0);
+AudioConnection          patchCord67(mixer2, chorus2);
+AudioConnection          patchCord68(mixer2, freeverb2);
+AudioConnection          patchCord69(envelope5, 0, mixer9, 0);
+AudioConnection          patchCord70(envelope5, delay3);
+AudioConnection          patchCord71(chorus2, 0, mixer7, 1);
+AudioConnection          patchCord72(chorus1, 0, mixer6, 1);
+AudioConnection          patchCord73(freeverb2, 0, mixer7, 2);
+AudioConnection          patchCord74(freeverb1, 0, mixer6, 2);
+AudioConnection          patchCord75(delay3, 0, mixer8, 0);
+AudioConnection          patchCord76(delay3, 1, mixer8, 1);
+AudioConnection          patchCord77(delay3, 2, mixer8, 2);
+AudioConnection          patchCord78(delay3, 3, mixer8, 3);
+AudioConnection          patchCord79(mixer9, amp4);
+AudioConnection          patchCord80(mixer8, 0, mixer9, 1);
+AudioConnection          patchCord81(mixer7, 0, mixer14, 0);
+AudioConnection          patchCord82(mixer6, 0, mixer15, 0);
+AudioConnection          patchCord83(mixer15, biquad1);
+AudioConnection          patchCord84(mixer14, biquad2);
+AudioConnection          patchCord85(biquad2, 0, i2s1, 1);
+AudioConnection          patchCord86(biquad1, 0, i2s1, 0);
+AudioControlSGTL5000     sgtl5000_1;     //xy=3046.3331451416016,828.9999752044678
+// GUItool: end automatically generated code
+
+
+
+
+#define SDCARD_CS_PIN 10
+#define SDCARD_MOSI_PIN 7
+#define SDCARD_SCK_PIN 14
+
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
+
+int textX = 128;
+String text = "YOUR BRAIN WAX IS MELTING           I luv u            (◐ω◑ )";
+
+const int barWidth = 8;
+const int barHeightMax = 40;
+const int barX = 1;
+const int barY = 64 - barHeightMax - 4;
+
+//pots
+const int pot1 = A14;
+const int pot2 = A16;
+const int pot3 = A17;
+const int pot4 = A12;
+const int potVol = A15;
+
+
+int tuneChannel1pot = A14;
+int tuneChannel2pot = A16;
+int noiseTypePot = A17;
+int arpSpeed = A12;
+
+const int pot5Slider = A13;
+
+int pots[] = {pot1, pot2, pot3, pot4};
+
+
+
+float distortionLevel = 1.0;
+
+int Ffreq;
+int mapsinefreq;
+int x;
+int y;
+int vol;
+int volmap;
+float volmapcal;
+
+int posW = 30;
+int posH = 20;
+int picNum;
+int picNumMap;
+int mapfreq;
+
+// int modeSwitch = 28;
+int lastPeakUpdate;
+int filterSpeed;
+int filterSpeedMapped;
+
+const unsigned char *meFrames[14] = {
+    me_bitmap_pixil_frame_0,
+    me_bitmap_pixil_frame_1,
+    me_bitmap_pixil_frame_2,
+    me_bitmap_pixil_frame_3,
+    me_bitmap_pixil_frame_4,
+    me_bitmap_pixil_frame_5,
+    me_bitmap_pixil_frame_6,
+    me_bitmap_pixil_frame_7,
+    me_bitmap_pixil_frame_8,
+    me_bitmap_pixil_frame_9,
+    me_bitmap_pixil_frame_10,
+    me_bitmap_pixil_frame_11,
+    me_bitmap_pixil_frame_12,
+    me_bitmap_pixil_frame_13};
+
+const uint8_t *manTalking[] = {
+    mantalkingframe0,
+    mantalkingframe1,
+    mantalkingframe2};
+
+const uint8_t *manStanding[] = {
+    manframe0,
+    manframe1,
+    manframe2};
+
+bool aniBool = true;
+int counter = 0;
+
+int sampleCount = 0;
+int startup = true;
+
+// animationtracking
+long previousMillis = 0;
+const long interval = 100;
+const long interval2 = 300;
+
+int currentMeFrame = 0;
+int j;
+int j2;
+int introCount = 0;
+
+//startup
+int pressthestartbuttonprev = 0;
+int jitter = 0;
+int endofscreenglitchbool = 0;
+
+// mode 1
+
+long prevMill = 0;
+long channelInterval = 1000;
+bool displayChannelNum = false;
+int channelplacX = 3;
+int channelplacy = 1;
+int premil = 0;
+
+
+
+// arp
+const int arpPin = 24;
+const int splashPin = 25;
+
+
+
+
+int potLastState[] = {0, 0, 0, 0};
+int potval[] = {0, 0, 0, 0};
+
+const int arpLength = 8;
+float frequencies[arpLength];
+int currentNote = 0;
+int arpDirection = 1;
+unsigned long lastNoteChange = 0;
+unsigned long noteInterval = 200;
+
+bool wasButtonPressed = false;
+
+int ranNote;
+int i;
+// mode 2
+int prevmode2button = 0;
+const char *samplesAudioPads[] = {"pad1.raw", "pad2.raw", "pad3.raw","pad5.raw"};
+const char *samplesAudioDrums[] = {"drum1 161.5.raw","drum2 161.5.raw","drum3 161.5.raw"};
+int sampleNum = 0;
+int currentMillis;
+int currenttapemachineanim;
+
+String currentRaw[] = {};
+
+int degreesAngle = 0;
+
+int mediaplayerprevmills = 0;
+int mediaplayeranimatioframe = 0;
+
+float samplePitch = 0;
+float sampleTraversStart = 0;
+float sampleTraversEnd = 0;
+
+// mode 3
+
+unsigned long lastNoteTime[4] = {0, 0, 0, 0};
+unsigned long noteDuration[4] = {500, 500, 500, 500};
+int rhythmDivision[4] = {4, 4, 4, 4};
+int spinSpeed = 0;
+
+int mode3switchstate = 0;
+int mode3switchstateLast = 0;
+
+int scaleSelect = 0;
+int scaleval = 0;
+
+int currentFrameCat = 0;
+int previousMillisCat = 0;
+
+int currWave;
+int waveFroms[4] = {WAVEFORM_SINE, WAVEFORM_TRIANGLE, WAVEFORM_SQUARE, WAVEFORM_SAWTOOTH};
+
+int potAttValue;
+int attMapped;
+int potReleaseValue;
+int releaseMapped;
+
+int octave = 1;
+int notenum;
+
+int mode3pot4switch = 0;
+
+int notesMajorQuanC[7] = {65.4, 73.425, 82.425, 87.3, 98, 110, 123.25};
+int notesMajorQuanD[7] = {73.42, 82.41, 92.50, 98.00, 110.00, 123.47, 138.59};
+int notesMajorQuanE[7] = {82.41, 92.50, 103.83, 110.00, 123.47, 138.59, 155.56};
+int notesMajorQuanF[7] = {87.31, 98.00, 110.00, 116.54, 130.81, 146.83, 164.81};
+int notesMajorQuanG[7] = {98.00, 110.00, 123.47, 130.81, 146.83, 164.81, 185.00};
+int notesMajorQuanA[7] = {110.00, 123.47, 138.59, 146.83, 164.81, 185.00, 207.65};
+int notesMajorQuanB[7] = {123.47, 138.59, 155.56, 164.81, 185.00, 207.65, 233.08};
+
+int *scales[7] = {notesMajorQuanC, notesMajorQuanD, notesMajorQuanE, notesMajorQuanF, notesMajorQuanG, notesMajorQuanA, notesMajorQuanB};
+
+int potTempoValue;
+long unsigned prevmil;
+
+int tempo = 2000;
+
+
+
+int tempoPotValue = 0;
+unsigned long tempoMapped = 0;
+unsigned long lastStepTime = 0;
+int currentTime = 0;
+
+int lineCount = 0;
+int peakValue = 0;
+int peakUpdateInterval = 0;
+
+//mode3mode2visuals
+
+unsigned long lastframefortree = 0;
+int currentFramefortree = 0;
+bool bayer = true;
+
+
+
+// mode4
+
+int delaypot;
+int delaytime;
+
+int toggleState = false;
+int LBSmode4menus = HIGH;
+int LBSmode4knobs = HIGH;
+
+int moveBitmap;
+int initiate;
+int displaynum = 0;
+
+int drumbuttonstate = 0;
+int drumbuttonstateprev = 0;
+
+int xforline = 0;
+int yforline = 0;
+
+int A = 0;
+int B = 0;
+long inter = 1000;
+long prevmills = 0;
+int tempoM4 = 1000;
+
+int buttonState = 0;
+int buttonStateLast = 0;
+int DelayDW = 0;
+
+int startupformode4 = 0;
+
+int osc1f_unmap = 0;
+int osc2f_unmap = 0;
+int unmapped = 0;
+
+int catframnum = 0;
+
+unsigned long tracker = 0;
+
+// ani func
+int lastframe = 0;
+int currentFrame = 0;
+
+int lastframe2 = 0;
+int currentFrame2 = 0;
+
+int lastframe3 = 0;
+int currentFrame3 = 0;
+
+// mixerMode
+int lastMixState = 0;
+int mixModeChecker = 0;
+
+int mixModeState = 0;
+int mixerState = 1;
+
+int uniTempo = 0;
+
+int prevTime = 0;
+int frame = 0;
+int frame2 = 0;
+
+int mixerEffect = 0;
+int mixerEffectStateprev = 0;
+int mixerEffectState = 0;
+
+DMAMEM byte audioBuffer[2048];
+// master effects
+
+int chorusWetValue = 0;
+int ChorusButtonState = 0;
+int ChorusLastBS = 0;
+int masterChorusDW = 0;
+
+int reverbWetValue = 0;
+int ReverbButtonState = 0;
+int ReverbLastBS = 0;
+int masterReverbDW = 0;
+
+int waveform = 0;
+
+//mastereffects screen
+const char* effectsnames[3] = {"Reverb", "Chorus", "Fiter"};
+int line = 0; 
+int selectbuttonState = 0;
+int lastselectbuttonState = 0; 
+
+int isMasterEffectOn = 0;
+int effectSelected;
+
+// potsaving
+const int numOfPots = 4;
+const int modeNum = 5;
+int newMode = 0;
+int potKeys[4]{A17, A16, A12, A15};
+
+float potValues[numOfPots][modeNum];
+int currentMode = 0;
+
+void setup()
+{
+  Serial.begin(9600);
+
+  AudioMemory(1000);
+
+  sgtl5000_1.enable();
+  sgtl5000_1.volume(0.8);
+
+  pinMode(arpPin, INPUT_PULLUP);
+  pinMode(splashPin, INPUT_PULLUP);
+
+  // mode 4
+  waveformMod1.begin(1, 420, WAVEFORM_SINE);
+  waveformMod2.begin(1, 420, WAVEFORM_SINE);
+
+  waveformMod4.begin(1, 329.63, WAVEFORM_SINE);
+  waveformMod5.begin(1, 493.88, WAVEFORM_SINE);
+  waveformMod6.begin(1, 523.25, WAVEFORM_SINE);
+
+  sine3.frequency(0.5);
+  sine6.frequency(0.5);
+  sine7.frequency(0.5);
+
+  mixer18.gain(0, 0);
+  mixer18.gain(1, 0);
+  mixer18.gain(2, 0);
+  mixer18.gain(3, 0);
+
+  
+
+  // delay
+  mixer9.gain(0, 1);
+  mixer9.gain(1, 0);
+  mixer9.gain(2, 0);
+
+  mixer16.gain(0, 0);
+  mixer16.gain(1, 0);
+  mixer16.gain(2, 0);
+  mixer16.gain(3, 0);
+
+  mixer8.gain(0, 1);
+  mixer8.gain(1, 0.8);
+  mixer8.gain(2, 0.6);
+  mixer8.gain(3, 0.3);
+
+  delay3.delay(0, 0);
+  delay3.delay(1, 1000);
+  delay3.delay(2, 1500);
+  delay3.delay(3, 2000);
+
+  // feedback mixers for mode 1
+  mixer10.gain(0, 1);
+  mixer10.gain(1, 0.5);
+  mixer10.gain(2, 0.3);
+
+  mixer11.gain(1, 0.5);
+
+  sine2.amplitude(0.5);
+  sine2.frequency(500);
+
+  sine_fm1.amplitude(0.8);
+  sine_fm1.frequency(440);
+
+  sine1.amplitude(0.5);
+  sine1.frequency(420);
+
+  // chord waves
+  waveform1.begin(WAVEFORM_SINE);
+  waveform1.amplitude(1.0);
+  waveform1.frequency(420);
+
+  waveform2.begin(WAVEFORM_SINE);
+  waveform2.amplitude(1.0);
+  waveform2.frequency(420);
+
+  waveform3.begin(WAVEFORM_SINE);
+  waveform3.amplitude(1.0);
+  waveform3.frequency(420);
+
+  waveform4.begin(WAVEFORM_SINE);
+  waveform4.amplitude(1.0);
+  waveform4.frequency(420);
+
+  chaosnoise.chaos(0.8f);
+  noise1.amplitude(0.5);
+
+  pwm1.frequency(300);
+  pwm1.amplitude(0.3);
+
+  // chordgenmixers
+
+  mixer3.gain(0, 0.3);
+  mixer3.gain(2, 0.3);
+  mixer3.gain(3, 0.3);
+  mixer3.gain(1, 0.3);
+
+  // masterchorus
+
+  // masterReverb
+
+  freeverb1.roomsize(0.5);
+  freeverb2.roomsize(0.5);
+  freeverb1.damping(0.5);
+  freeverb2.damping(0.5);
+
+  // master
+  mixer6.gain(0, 0);
+  mixer6.gain(1, 0);
+  mixer6.gain(2, 0);
+
+  mixer7.gain(0, 0);
+  mixer7.gain(1, 0);
+  mixer7.gain(2, 0);
+
+  //masterfinal
+  mixer15.gain(0, 1);
+  mixer14.gain(1, 0);
+  
+
+  mixer15.gain(0, 1);
+  mixer14.gain(1, 0);
+
+  //masterfilter
+  biquad1.setLowpass(0, 100000, 0.707);
+  biquad2.setLowpass(0, 100000, 0.707);
+
+  biquad1.setHighpass(0, 15, 1.0); 
+  biquad2.setHighpass(0, 15, 1.0);
+
+  // mode2
+  samplePlayer.looping = true;
+
+  // pinMode(modeSwitch, INPUT);
+  // oled setup
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.clearDisplay();
+  // text config
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+
+  display.display();
+
+  SPI.setMOSI(SDCARD_MOSI_PIN);
+  SPI.setSCK(SDCARD_SCK_PIN);
+  if (!(SD.begin(SDCARD_CS_PIN)))
+  {
+    while (1)
+    {
+      Serial.println("Unable to access the SD card");
+    }
+  }
+
+  for (int i = 0; i < modeNum; i++)
+  {
+    for (int j = 0; j < numOfPots; j++)
+    {
+      potValues[i][j] = 0.0;
+    }
+  }
+}
+
+void checkWave(int wavefromPot)
+{
+
+  int waveformMapped = map(wavefromPot, 0, 1023, 1, 4);
+
+  switch (waveformMapped)
+  {
+
+  case 1:
+    currWave = waveFroms[0];
+    break;
+
+  case 2:
+    currWave = waveFroms[1];
+    break;
+
+  case 3:
+    currWave = waveFroms[2];
+    break;
+
+  case 4:
+    currWave = waveFroms[3];
+    break;
+  }
+}
+
+
+
+void setMixerMode(int mode, int mixState)
+{
+
+  if (mixState == 1)
+  {
+
+    amp1.gain(1);
+    amp2.gain(1);
+    amp3.gain(1);
+    amp4.gain(1);
+    amp5.gain(1);
+    amp7.gain(1);
+
+    if (mode == 1)
+    {
+
+      mixer1.gain(1, 0);
+      mixer2.gain(1, 0);
+
+      mixer1.gain(3, 0.0);
+      mixer2.gain(3, 0.0);
+
+      mixer1.gain(2, 0.0);
+      mixer2.gain(2, 0.0);
+
+      mixer1.gain(0, 0.8);
+      mixer2.gain(0, 0.8);
+    }
+
+    if (mode == 2)
+    {
+
+      mixer1.gain(1, 1);
+      mixer2.gain(1, 1);
+
+      mixer1.gain(0, 0.0);
+      mixer2.gain(0, 0.0);
+
+      mixer1.gain(2, 0.0);
+      mixer2.gain(2, 0.0);
+
+      mixer1.gain(3, 0.0);
+      mixer2.gain(3, 0.0);
+
+      mixer5.gain(0, 1);
+      mixer5.gain(1, 0);
+
+      mixer4.gain(0, 1);
+      mixer4.gain(1, 0);
+    }
+
+    if (mode == 3)
+    {
+
+      mixer1.gain(1, 1);
+      mixer2.gain(1, 1);
+
+      mixer1.gain(0, 0.0);
+      mixer2.gain(0, 0.0);
+
+      mixer1.gain(3, 0.0);
+      mixer2.gain(3, 0.0);
+
+      mixer1.gain(2, 1);
+      mixer2.gain(2, 1);
+
+      mixer5.gain(0, 0);
+      mixer5.gain(1, 0);
+
+      mixer4.gain(0, 0);
+      mixer4.gain(1, 0);
+    }
+
+    if (mode == 4)
+    {
+
+      mixer1.gain(1, 0.0);
+      mixer2.gain(1, 0.0);
+
+      mixer1.gain(0, 0.0);
+      mixer2.gain(0, 0.0);
+
+      mixer1.gain(3, 0.8);
+      mixer2.gain(3, 0.8);
+
+      mixer1.gain(2, 0);
+      mixer2.gain(2, 0);
+    }
+  }
+
+  if (mixState == 0)
+  {
+
+    mixer1.gain(0, 0.9);
+    mixer1.gain(1, 0.9);
+    mixer1.gain(2, 0.9);
+    mixer1.gain(3, 0.9);
+
+    mixer2.gain(0, 0.9);
+    mixer2.gain(1, 0.9);
+    mixer2.gain(2, 0.9);
+    mixer2.gain(3, 0.9);
+
+    mixer5.gain(0, 1);
+    mixer4.gain(0, 1);
+
+    if (mixerEffect == 0)
+    {
+      if (mode == 0)
+      {
+        // mode1
+        int amp1Gainunmapped = analogRead(pot1);
+        float amp1Gain = (map(amp1Gainunmapped, 0, 1023, 0, 100)) * 0.01;
+
+        if (amp1Gainunmapped <= 10) { 
+            amp1Gain = 0.0;
+        }
+
+        amp1.gain(amp1Gain);
+        amp5.gain(amp1Gain);
+
+        // mode2
+        int amp2Gainunmapped = analogRead(pot2);
+        float amp2Gain = (map(amp2Gainunmapped, 0, 1023, 0, 100)) * 0.01;
+
+        if (amp2Gainunmapped <= 10) { 
+            amp2Gain = 0.0;
+        }
+
+        amp3.gain(amp2Gain);
+        amp7.gain(amp2Gain);
+        
+        // mode3
+        int amp3Gainunmapped = analogRead(pot3);
+        float amp3Gain = (map(amp3Gainunmapped, 0, 1023, 0, 100)) * 0.01;
+
+        if (amp3Gainunmapped <= 10) { 
+            amp3Gain = 0.0;
+        }
+
+        amp2.gain(amp3Gain);
+
+        // mode4
+        int amp4Gainunmapped = analogRead(pot4);
+        float amp4Gain = (map(amp4Gainunmapped, 0, 1023, 0, 100)) * 0.01;
+
+        if (amp4Gainunmapped <= 10) { 
+            amp4Gain = 0.0;
+        }
+
+        amp4.gain(amp4Gain);
+      }
+    }
+  }
+}
+
+void mixModeCheck()
+{
+
+  int mixButton = digitalRead(arpPin);
+
+  if (mixButton == LOW && lastMixState == HIGH)
+  {
+    mixModeChecker = !mixModeChecker;
+
+    if (mixModeChecker == 0)
+    {
+
+      mixModeState = 1;
+      if (mixModeState == 1)
+      {
+
+        mixerState = 1;
+      }
+    }
+
+    if (mixModeChecker == 1)
+    {
+
+      mixerState = 0;
+    }
+  }
+
+  lastMixState = mixButton;
+}
+
+
+void noise(unsigned char *bitmap, int numBytes, float distortionLevel)
+{
+
+  for (int i = 0; i < numBytes; i++)
+  {
+
+    for (int bit = 0; bit < 8; bit++)
+    {
+
+      if (random(0, 100) < distortionLevel * 100)
+      {
+
+        bitmap[i] ^= (1 << bit);
+      }
+    }
+  }
+}
+
+void ranPix()
+{
+
+  display.clearDisplay();
+
+  for (int i = 0; i < 100; i++)
+  {
+    int x = random(128);
+    int y = random(64);
+    display.drawPixel(x, y, WHITE);
+  }
+
+  display.display();
+  delay(100);
+}
+
+bool randomAB()
+{
+
+  //int potVal = analogRead(pot3);
+  //int mappedAPrec = map(potVal, 0, 1023, 100, 0);
+
+  int ranVal = random(0, 100);
+
+  if (ranVal < 50)
+  {
+
+    return true;
+  }
+
+  else
+  {
+
+    return false;
+  }
+}
+
+void checkOctave()
+{
+
+  if (analogRead(pot4) < 950)
+  {
+
+    int potOctave = analogRead(pot4);
+    int octaveMapped = map(potOctave, 0, 1023, 1, 6);
+
+    switch (octaveMapped)
+    {
+
+    case 1:
+      octave = 1;
+      break;
+
+    case 2:
+      octave = 2;
+      break;
+
+    case 3:
+      octave = 4;
+      break;
+
+    case 4:
+      octave = 8;
+      break;
+
+    case 5:
+      octave = 16;
+      break;
+
+    case 6:
+      octave = 32;
+      break;
+    }
+  }
+
+  if (analogRead(A15) > 950)
+  {
+
+    int octaveRan = random(1, 7);
+
+    switch (octaveRan)
+    {
+
+    case 1:
+      octave = 1;
+      break;
+
+    case 2:
+      octave = 2;
+      break;
+
+    case 3:
+      octave = 4;
+      break;
+
+    case 4:
+      octave = 8;
+      break;
+
+    case 5:
+      octave = 16;
+      break;
+
+    case 6:
+      octave = 32;
+      break;
+    }
+  }
+}
+
+
+//SEQ CHANGES
+void changeNote()
+{
+
+  if (mode3pot4switch = 1)
+  {
+    checkOctave();
+  }
+
+  waveform1.amplitude(0.5);
+  notenum = random(0, 7);
+  waveform1.frequency((scales[scaleSelect][notenum]) * octave);
+}
+
+void changeNote2()
+{
+
+  if (mode3pot4switch = 1)
+  {
+    checkOctave();
+  }
+  waveform2.amplitude(0.5);
+  notenum = random(0, 7);
+  waveform2.frequency((scales[scaleSelect][notenum]) * octave);
+}
+
+void changeNote3()
+{
+
+  if (mode3pot4switch = 1)
+  {
+    checkOctave();
+  }
+  waveform3.amplitude(0.5);
+  notenum = random(0, 7);
+  waveform3.frequency((scales[scaleSelect][notenum]) * octave);
+}
+
+void changeNote4()
+{
+
+  if (mode3pot4switch = 1)
+  {
+    checkOctave();
+  }
+  waveform4.amplitude(0.5);
+  notenum = random(0, 7);
+  waveform4.frequency((scales[scaleSelect][notenum]) * octave);
+}
+
+void setEnvelope1(int att, int release)
+{
+
+  envelope1.attack(att);
+  envelope1.decay(500);
+  envelope1.sustain(0);
+  envelope1.release(release);
+}
+
+void setEnvelope2(int att, int release)
+{
+
+  envelope2.attack(att);
+  envelope2.decay(500);
+  envelope2.sustain(0);
+  envelope2.release(release);
+}
+
+void setEnvelope3(int att, int release)
+{
+
+  envelope3.attack(att);
+  envelope3.decay(500);
+  envelope3.sustain(0);
+  envelope3.release(release);
+}
+
+void setEnvelope4(int att, int release)
+{
+
+  envelope4.attack(att);
+  envelope4.decay(500);
+  envelope4.sustain(0);
+  envelope4.release(release);
+}
+
+void setEnvelope5(int att, int release)
+{
+
+  envelope5.attack(att);
+  envelope5.decay(500);
+  envelope5.sustain(0);
+  envelope5.release(release);
+}
+
+
+
+void onStep(int attPot, int checkWavepot)
+{
+
+
+    checkWave(checkWavepot);
+    waveform1.begin(currWave);
+    waveform2.begin(currWave);
+    waveform3.begin(currWave);
+    waveform4.begin(currWave);
+
+    attMapped = map(attPot, 0, 1023, 5, 800);
+
+    releaseMapped = map(potAttValue, 0, 1023, 50, 2000);
+
+    // Serial.println("aftermapping onStep");
+    // // checkTempo();
+    // Serial.println("after check tempo");
+
+    setEnvelope1(attMapped, releaseMapped);
+    setEnvelope2(attMapped, releaseMapped);
+    setEnvelope3(attMapped, releaseMapped);
+    setEnvelope4(attMapped, releaseMapped);
+
+    changeNote();
+    changeNote2();
+    changeNote3();
+    changeNote4();
+
+    envelope1.noteOn();
+    envelope2.noteOn();
+    envelope3.noteOn();
+    envelope4.noteOn();
+
+    unsigned long noteDuration = releaseMapped + attMapped;
+
+    static unsigned long lastNoteTime = millis();
+
+    if (millis() - lastNoteTime >= noteDuration)
+    {
+      envelope1.noteOff();
+      envelope2.noteOff();
+      envelope3.noteOff();
+      envelope4.noteOff();
+
+      lastNoteTime = millis();
+    }
+
+
+
+  
+}
+
+void onStep()
+{
+
+  checkWave(waveform);
+  waveform1.begin(currWave);
+  waveform2.begin(currWave);
+  waveform3.begin(currWave);
+  waveform4.begin(currWave);
+
+  attMapped = map(potAttValue, 0, 1023, 5, 800);
+
+  releaseMapped = map(potAttValue, 0, 1023, 50, 2000);
+
+  // Serial.println("aftermapping onStep");
+  // // checkTempo();
+  // Serial.println("after check tempo");
+
+  setEnvelope1(attMapped, releaseMapped);
+  setEnvelope2(attMapped, releaseMapped);
+  setEnvelope3(attMapped, releaseMapped);
+  setEnvelope4(attMapped, releaseMapped);
+
+  changeNote();
+  changeNote2();
+  changeNote3();
+  changeNote4();
+
+  envelope1.noteOn();
+  envelope2.noteOn();
+  envelope3.noteOn();
+  envelope4.noteOn();
+
+  unsigned long noteDuration = releaseMapped + attMapped;
+
+  static unsigned long lastNoteTime = millis();
+
+  if (millis() - lastNoteTime >= noteDuration)
+  {
+    envelope1.noteOff();
+    envelope2.noteOff();
+    envelope3.noteOff();
+    envelope4.noteOff();
+
+    lastNoteTime = millis();
+  }
+}
+
+void randomSeqOnStep(int attPot, int checkWavepot, int voice){
+
+  checkWave(checkWavepot);
+  waveform1.begin(currWave);
+  waveform2.begin(currWave);
+  waveform3.begin(currWave);
+  waveform4.begin(currWave);
+
+  attMapped = map(attPot, 0, 1023, 5, 800);
+  releaseMapped = map(potAttValue, 0, 1023, 50, 2000);
+
+  setEnvelope1(attMapped, releaseMapped);
+  setEnvelope2(attMapped, releaseMapped);
+  setEnvelope3(attMapped, releaseMapped);
+  setEnvelope4(attMapped, releaseMapped);
+
+  switch (voice) {
+    case 0: changeNote(); envelope1.noteOn(); break;
+    case 1: changeNote2(); envelope2.noteOn(); break;
+    case 2: changeNote3(); envelope3.noteOn(); break;
+    case 3: changeNote4(); envelope4.noteOn(); break;
+  }
+
+  unsigned long voiceNoteDuration = releaseMapped + attMapped;
+
+  static unsigned long lastNoteTime2 = millis();
+
+    if (millis() - lastNoteTime2 >= voiceNoteDuration)
+    {
+      switch (voice) {
+        case 0: envelope1.noteOff(); break;
+        case 1: envelope2.noteOff(); break;
+        case 2: envelope3.noteOff(); break;
+        case 3: envelope4.noteOff(); break;
+
+        lastNoteTime2 = millis();
+      }
+
+    }
+
+}
+
+
+void mode4OnStep(int osc1f_unmap, int osc2f_unmap, int unmapped)
+{
+
+  long currMil = millis();
+
+  
+  float volforscream = ((analogRead(pot3))/1023.0);
+  
+
+  int randomAtt;
+  int randomRel;
+  
+
+  int osc1freq = map(osc1f_unmap, 0, 1023, 24, 2800);
+
+  int osc2mod = map(osc2f_unmap, 0, 1023, 24, 2800);
+
+  waveformMod1.frequency(osc2mod);
+  waveformMod2.frequency(osc1freq);
+  mixer9.gain(0, volforscream);
+
+  buttonState = digitalRead(arpPin);
+
+  if (buttonState == LOW && buttonStateLast == HIGH)
+  {
+    DelayDW = !DelayDW;
+
+    if (DelayDW == 0)
+    {
+      
+      mixer9.gain(1, 0);
+    }
+
+    if (DelayDW == 1)
+    {
+      
+      mixer9.gain(1, volforscream);
+
+      delaypot = analogRead(pot4);
+      delaytime = map(delaypot, 0, 1023, 50, 1000);
+
+      delay3.delay(0, 0);
+      delay3.delay(1, delaytime);
+      delay3.delay(2, delaytime+500);
+      delay3.delay(3, delaytime+1000);
+
+      
+    }
+  }
+
+  buttonStateLast = buttonState;
+
+  if (currMil - prevmills >= tempoM4)
+  {
+
+    prevmills = currMil;
+
+    if (randomAB())
+    {
+
+      tempoM4 = map(unmapped, 0, 1023, 400, 2000);
+
+     
+      randomAtt = random(50, 1000);
+      randomRel = random(500, 8000);
+      setEnvelope5(randomAtt, randomRel);
+      envelope5.noteOn();
+
+      long notelength = randomAtt + randomRel + 500;
+      if (currMil - prevmills >= notelength)
+      {
+        envelope5.noteOff();
+      }
+    }
+
+    else
+    {
+    }
+  }
+}
+
+void mode4OnStepnormal()
+{
+
+  long currMil = millis();
+
+  int randomAtt;
+  int randomRel;
+  int randomfreqMod;
+
+  int osc1freq = map(osc1f_unmap, 0, 1023, 24, 2800);
+
+  int osc2mod = map(osc2f_unmap, 0, 1023, 24, 2800);
+
+  waveformMod1.frequency(osc2mod);
+  waveformMod2.frequency(osc1freq);
+
+  buttonState = digitalRead(arpPin);
+
+  if (buttonState == LOW && buttonStateLast == HIGH)
+  {
+    DelayDW = !DelayDW;
+
+    if (DelayDW == 0)
+    {
+      mixer9.gain(0, 1);
+      mixer9.gain(1, 0);
+
+
+      
+
+    }
+
+    if (DelayDW == 1)
+    {
+      mixer9.gain(0, 0);
+      mixer9.gain(1, 1);
+
+      delay3.delay(0, 0);
+      delay3.delay(1, delaytime);
+      delay3.delay(2, delaytime+500);
+      delay3.delay(3, delaytime+1000);
+
+
+    }
+  }
+
+  buttonStateLast = buttonState;
+
+  if (currMil - prevmills >= tempoM4)
+  {
+
+    prevmills = currMil;
+
+    if (randomAB())
+    {
+
+      tempoM4 = map(unmapped, 0, 1023, 400, 2000);
+
+      randomfreqMod = random(20, 1500);
+
+      randomAtt = random(50, 1000);
+      randomRel = random(500, 8000);
+      setEnvelope5(randomAtt, randomRel);
+      envelope5.noteOn();
+
+      long notelength = randomAtt + randomRel + 500;
+      if (currMil - prevmills >= notelength)
+      {
+        envelope5.noteOff();
+      }
+    }
+
+    else
+    {
+    }
+  }
+}
+
+void changeFreq(int freq)
+{
+
+  pwm1.frequency(freq);
+  sine_fm1.frequency(freq);
+  sine1.frequency(freq);
+}
+
+
+//VISUALS
+void createAnim(const unsigned char *animation[], int speed, int bitArryLength, int y, int x, int w, int h)
+{
+
+  currentMillis = millis();
+
+  if (currentMillis - lastframe >= speed)
+  {
+
+    lastframe = currentMillis;
+
+    display.clearDisplay();
+    display.drawBitmap(y, x, animation[currentFrame], w, h, WHITE);
+    display.display();
+    currentFrame++;
+
+    if (currentFrame == (bitArryLength))
+    {
+      currentFrame = 0;
+    }
+  }
+}
+
+void createTextBubbleWhite(String text, int x, int y)
+{
+
+  display.fillRect(4 + x, 9 + y, 30, 11, WHITE);
+  display.fillCircle(4 + x, 14 + y, 5, WHITE);
+  display.fillCircle(34 + x, 14 + y, 5, WHITE);
+  display.setTextColor(BLACK);
+  display.setCursor(5 + x, 10 + y);
+  display.print(text);
+  
+}
+
+void createKnobBlack(int pot, int x, int y, int radius)
+{
+
+  int angleDegPot = map(analogRead(pot), 0, 1023, 90, 450);
+  float angleRad = angleDegPot * (PI / 180);
+
+  float x2 = x + radius * cos(angleRad);
+  float y2 = y + radius * sin(angleRad);
+
+  display.drawCircle(x, y, radius, BLACK);
+  display.drawLine(x, y, x2, y2, BLACK);
+}
+
+void createKnobWhite(int pot, int x, int y, int radius)
+{
+
+  int angleDegPot = map(analogRead(pot), 0, 1023, 90, 450);
+  float angleRad = angleDegPot * (PI / 180);
+
+  float x2 = x + radius * cos(angleRad);
+  float y2 = y + radius * sin(angleRad);
+
+  display.drawCircle(x, y, radius, WHITE);
+  display.drawLine(x, y, x2, y2, WHITE);
+}
+
+void noiseEdge(int potval)
+{
+
+  for (int y = 0; y < potval; y++)
+  {
+
+    for (int x = 0; x < 128; x++)
+    {
+
+      if (random(0, 2) == 0)
+      {
+        display.drawPixel(x, y, WHITE);
+        display.drawPixel(x, 64 - 1 - y, WHITE);
+      }
+    }
+  }
+
+  for (int x = 0; x < potval; x++)
+  {
+
+    for (int y = 0; y < 64; y++)
+    {
+
+      if (random(0, 2) == 0)
+      {
+        display.drawPixel(x, y, WHITE);
+        display.drawPixel(128 - 1 - x, y, WHITE);
+      }
+    }
+  }
+}
+
+void drawMovingSquares(int squareCount, int craziness) {
+
+  
+
+  for (int i = 0; i < squareCount; i++) {
+    int x = random(0, 128);
+    int y = random(0, 64);
+    int size = random(5, craziness); // Random size based on craziness
+    bool filled = random(0, 2);
+
+    int xOffset = random(-3, 4);
+    int yOffset = random(-3, 4);
+
+    if (filled) {
+      display.fillRect(x + xOffset, y + yOffset, size, size, SSD1306_WHITE);
+    } else {
+      display.drawRect(x + xOffset, y + yOffset, size, size, SSD1306_WHITE);
+    }
+  }
+}
+
+//TIME
+int checkTempo(int pot)
+{
+
+  tempoPotValue = analogRead(pot);
+
+  tempoMapped = map(tempoPotValue, 0, 1023, 100, 6000);
+
+  return tempoMapped;
+}
+
+void checkScale()
+{
+
+  if (mode3pot4switch == 0)
+  {
+
+    int scalvaleun = analogRead(pot4);
+    scaleval = map(0, 1023, 0, 6, scalvaleun);
+  }
+
+  switch (scaleval)
+  {
+  case 0:
+    scaleSelect = 0;
+    break;
+  case 1:
+    scaleSelect = 1;
+    break;
+  case 2:
+    scaleSelect = 2;
+    break;
+  case 3:
+    scaleSelect = 3;
+    break;
+  case 4:
+    scaleSelect = 4;
+    break;
+  case 5:
+    scaleSelect = 5;
+    break;
+  case 6:
+    scaleSelect = 6;
+    break;
+  case 7:
+    scaleSelect = 7;
+    break;
+  }
+}
+
+
+
+
+//EFFECTS
+void checkReverb()
+{
+
+  
+  reverbWetValue = analogRead(pot1);
+  float mappedReverbWetValue = reverbWetValue / 1023.0;
+  float mappedDryValue = 1.0 - (reverbWetValue / 1023.0);
+
+    mixer6.gain(0, mappedDryValue);
+    mixer6.gain(1, 0);
+    mixer6.gain(2, mappedReverbWetValue);
+
+    mixer7.gain(0, mappedDryValue);
+    mixer7.gain(1, 0);
+    mixer7.gain(2, mappedReverbWetValue);
+   
+  }
+
+void checkChorus()
+{
+
+  
+  chorusWetValue = analogRead(pot2);
+  float mappedChorusWetValue = chorusWetValue / 1023.0;
+  float mappedChorusDryValue = 1.0 - mappedChorusWetValue;
+
+ 
+
+    
+   
+      
+   
+      mixer6.gain(0, mappedChorusDryValue);
+      mixer6.gain(1, 0);
+      mixer6.gain(2, mappedChorusWetValue);
+
+      mixer7.gain(0, mappedChorusDryValue);
+      mixer7.gain(1, 0);
+      mixer7.gain(2, mappedChorusWetValue);
+ 
+
+ 
+}
+
+void checkfilter() {
+
+  int lowPassPot = analogRead(pot3);
+  int highPassPot = analogRead(pot4);
+
+  float lowPassCutoff = map(lowPassPot, 0, 1023, 20, 2000);
+  float highPassCutoff = map(highPassPot, 0, 1023, 15, 2000);
+
+  biquad1.setLowpass(0, lowPassCutoff, 1.0); 
+  biquad1.setHighpass(1, highPassCutoff, 1.0); 
+
+  biquad2.setLowpass(0, lowPassCutoff, 1.0);
+  biquad2.setHighpass(1, highPassCutoff, 1.0);
+
+
+}
+
+
+
+void modeMixer()
+{
+
+  currentTime = millis();
+  if (currentTime - lastStepTime >= tempoMapped)
+  {
+    lastStepTime = currentTime;
+
+    onStep();
+    checkOctave();
+  }
+
+  mode4OnStepnormal();
+
+  mixModeCheck();
+
+  setMixerMode(0, mixerState);
+
+  mixerEffectState = digitalRead(splashPin);
+
+  if (mixerEffectState == LOW && mixerEffectStateprev == HIGH)
+  {
+    
+    mixerEffect++;
+    
+    if (mixerEffect == 2)
+    {
+      mixerEffect = 0;
+    }
+  }
+
+  mixerEffectStateprev = mixerEffectState;
+
+  // mode1
+  
+  if (mixerState == 0)
+  {
+
+    display.clearDisplay();
+
+    if (mixerEffect == 1)
+    {
+
+
+      //void createKnobWhite(int pot, int x, int y, int radius)
+
+      createKnobWhite(pot1, 26, 15, 6);
+      createKnobWhite(pot2, 70, 15, 6);
+      createKnobWhite(pot3, 26, 48, 6);
+      createKnobWhite(pot4, 70, 48, 6);
+
+      display.setCursor(14, 22);
+      display.setTextColor(WHITE);
+      display.print("space");
+
+      display.setCursor(55, 22);
+      display.setTextColor(WHITE);
+      display.print("chorus");
+
+      display.setCursor(31, 33);
+      display.setTextColor(WHITE);
+      display.print("filter");
+      
+      
+     
+       
+      
+      
+
+      display.drawBitmap(0, 0, mixereffectmixereffetcs, 128, 64, WHITE);
+      
+
+      checkReverb();
+      checkChorus();
+      checkfilter();
+
+    }
+
+    if (mixerEffect == 0)
+    {
+      float peakLevel1 = peak5.read();
+      int barHeight1 = (int)(peakLevel1 * barHeightMax);
+      if (peakLevel1 > 0) {
+        display.fillRect(19, barY + (barHeightMax - barHeight1), barWidth, barHeight1, SSD1306_WHITE);
+      }
+      display.drawRect(19, barY, barWidth, barHeightMax, SSD1306_WHITE);
+      
+      // mode2
+
+      float peakLevel2 = peak2.read();
+      int barHeight2 = (int)(peakLevel2 * barHeightMax);
+      if (peakLevel1 > 0) {
+      display.fillRect(45, barY + (barHeightMax - barHeight2), barWidth, barHeight2, SSD1306_WHITE);
+      }
+      display.drawRect(45, barY, barWidth, barHeightMax, SSD1306_WHITE);
+      // mode3
+
+      float peakLevel3 = peak3.read();
+      int barHeight3 = (int)(peakLevel3 * barHeightMax);
+
+      if (peakLevel1 > 0) {
+      display.fillRect(75, barY + (barHeightMax - barHeight3), barWidth, barHeight3, SSD1306_WHITE);
+      }
+
+      display.drawRect(75, barY, barWidth, barHeightMax, SSD1306_WHITE);
+      // mode4
+
+      float peakLevel4 = peak4.read();
+      int barHeight4 = (int)(peakLevel4 * barHeightMax);
+
+      if (peakLevel1 > 0) {
+      display.fillRect(101, barY + (barHeightMax - barHeight4), barWidth, barHeight4, SSD1306_WHITE);
+      }
+      
+      display.drawRect(101, barY, barWidth, barHeightMax, SSD1306_WHITE);
+
+      display.drawBitmap(0, 0, mixermainmixermain, 128, 64, WHITE);
+    }
+  }
+
+  // when mixer is off
+  else
+  {
+
+    if (currentTime - prevTime >= 200)
+    {
+
+      display.clearDisplay();
+      prevTime = currentTime;
+      display.drawBitmap(5, 0, manwithvr[frame], 128, 64, WHITE);
+      display.drawBitmap(0, 0, cuberotatingallArray[frame2], 64, 32, WHITE);
+
+      frame++;
+      frame2++;
+
+      if (frame == 2)
+      {
+        frame = 0;
+      }
+
+      if (frame2 == 180)
+      {
+        frame2 = 0;
+      }
+    }
+
+    createTextBubbleWhite("OFF", 15, 32);
+
+  }
+
+  display.display();
+}
+
+void savePotVal()
+{
+
+  for (int i = 0; i < numOfPots; i++)
+  {
+    potValues[currentMode][i] = analogRead(potKeys[i]) / 1023.0;
+  }
+}
+
+void setPotValforModeSwitch(int modeNum)
+{
+
+  // int noiseTypePot = A12;
+  // int tuneChannel1pot = A17;
+  // int tuneChannel2pot = A16;
+  // int arpSpeed = A15;
+
+  for (int i = 0; i < numOfPots; i++)
+  {
+    float restoredValue = potValues[currentMode][i];
+
+    if (modeNum == 1)
+    {
+      if (i == 0)
+        tuneChannel1pot = restoredValue;
+      if (i == 1)
+        tuneChannel2pot = restoredValue;
+      if (i == 2)
+        noiseTypePot = restoredValue;
+      if (i == 3)
+        arpSpeed = restoredValue;
+    }
+
+    if (modeNum == 2)
+    {
+      if (i == 0)
+        samplePitch = map(restoredValue * 1023, 0, 1023, -12, 12);
+      if (i == 1)
+        sampleTraversStart = map(restoredValue * 1023, 0, 1023, 0, 99) * 0.01;
+      if (i == 2)
+        sampleTraversEnd = map(restoredValue * 1023, 0, 1023, sampleTraversStart + 1, 99) * 0.01;
+    }
+  }
+}
+
+
+//MODES
+void mode1()
+{
+  static int toggelforarpscreen = 0;
+  
+
+  currentTime = millis();
+
+  if (currentTime - lastStepTime >= tempoMapped)
+  {
+    lastStepTime = currentTime;
+
+    
+
+    onStep();
+
+    
+    checkOctave();
+
+    
+  }
+
+  mode4OnStepnormal();
+  
+  currentFrameCat = 0;
+  startupformode4 = 0;
+  currentFrame3 = 0;
+
+  introCount = 0;
+
+  setMixerMode(1, mixerState);
+  
+  aniBool = true;
+
+  if (analogRead(tuneChannel1pot) <= 1000)
+  {
+
+    display.clearDisplay();
+
+    float peakLevel = peak1.read();
+    int barHeight = (int)(peakLevel * barHeightMax);
+    display.fillRect(barX, barY + (barHeightMax - barHeight), barWidth, barHeight, SSD1306_WHITE);
+    display.drawRect(barX, barY, barWidth, barHeightMax, SSD1306_WHITE);
+    if (analogRead(tuneChannel1pot) <= 1000 && analogRead(tuneChannel1pot) >= 850)
+    {
+      display.display();
+    }
+  }
+  // volume nob
+  // Serial.println("test 5");
+  // arp
+  int speedValue = analogRead(arpSpeed);
+  noteInterval = map(speedValue, 0, 1023, 50, 1000);
+
+  if (digitalRead(arpPin) == LOW)
+  {
+    wasButtonPressed = true;
+    toggelforarpscreen = 1;
+    
+
+    unsigned long currentMillis = millis();
+
+    if (currentMillis - lastNoteChange >= noteInterval)
+    {
+      lastNoteChange = currentMillis;
+
+      currentNote += arpDirection;
+
+      if (currentNote >= arpLength || currentNote < 0)
+      {
+        arpDirection = -arpDirection;
+        currentNote += arpDirection;
+      }
+
+      ranNote = random(mapfreq, mapfreq+100);
+      changeFreq(ranNote);
+      sine1.amplitude(0.5);
+    }
+  }
+
+  else
+  {
+    i++;
+    toggelforarpscreen = 0;
+
+    if (i == 599)
+    {
+      i = 0;
+    }
+//Serial.println("test 6");
+    int rateChaosunmapped = analogRead(noiseTypePot);
+    float rateChaos = map(rateChaosunmapped, 0, 1023, 5000, 100);
+    chaosnoise.rate(rateChaos);
+    if (analogRead(noiseTypePot) <= 500)
+    {
+      chaosnoise.mode(AudioSynthChaosNoise::CLASSIC);
+      mixer12.gain(1, 1);
+      mixer12.gain(0, 0);
+    }
+    if (analogRead(noiseTypePot) >= 501)
+    {
+      chaosnoise.mode(AudioSynthChaosNoise::BROKEN);
+      mixer12.gain(1, 1);
+      mixer12.gain(0, 0);
+    }
+    if (analogRead(noiseTypePot) <= 200)
+    {
+      mixer12.gain(1, 0);
+      mixer12.gain(0, 1);
+    }
+
+    sine1.frequency(i);
+
+    int audioM = analogRead(tuneChannel1pot);
+
+    mapfreq = map(audioM, 0, 1023, 0, y);
+    mapsinefreq = map(audioM, 0, 1023, 0, 500);
+
+    filter1.frequency(mapfreq);
+    sine_fm1.frequency(mapsinefreq);
+
+    pwm1.frequency(mapfreq);
+  }
+
+  picNum = analogRead(tuneChannel2pot);
+  picNumMap = map(picNum, 0, 1023, 0, 3);
+  y = map(picNum, 0, 1023, 0, 2000);
+
+  float distort = (float)analogRead(tuneChannel1pot) / 1000;
+  //Serial.println("test 7");
+  // stars condition
+  if (analogRead(tuneChannel1pot) >= 1000)
+  {
+
+    display.clearDisplay();
+    ranPix();
+  }
+  //Serial.println("test 8");
+  // man distortion conditions
+  if (analogRead(tuneChannel1pot) < 850)
+  {
+
+    if (picNumMap == 0)
+    {
+
+      noise(man, 1040, distort);
+      display.drawBitmap(posW / 2, posH / 2, man, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[5], 25, 10, WHITE);
+    }
+
+    if (picNumMap == 1)
+    {
+
+      noise(man2, 1040, distort);
+      display.drawBitmap(posW / 2, posH / 2, man2, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[6], 25, 10, WHITE);
+    }
+
+    if (picNumMap == 2)
+    {
+
+      noise(man3, 1040, distort);
+      display.drawBitmap(posW / 2, posH / 2, man3, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[7], 25, 10, WHITE);
+    }
+  }
+
+  // non distorted man conditions
+  //Serial.println("test 9");
+  if (analogRead(tuneChannel1pot) > 850)
+  {
+
+    if (picNumMap == 0)
+    {
+
+      display.drawBitmap(posW / 2, posH / 2, manog, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[1], 25, 10, WHITE);
+      display.display();
+    }
+
+    if (picNumMap == 1)
+    {
+
+      display.drawBitmap(posW / 2, posH / 2, man2og, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[0], 25, 10, WHITE);
+      display.display();
+    }
+
+    if (picNumMap == 2)
+    {
+
+      display.drawBitmap(posW / 2, posH / 2, man3og, 128, 64, WHITE);
+      display.drawBitmap(channelplacy, channelplacX, channelArray[4], 25, 10, WHITE);
+      display.display();
+    }
+  }
+//Serial.println("test 10");
+  if (analogRead(tuneChannel1pot) <= 1000)
+  {
+
+    int16_t x1, y1;
+    uint16_t w, h;
+
+    display.getTextBounds(text, textX, 0, &x1, &y1, &w, &h);
+    display.setCursor(textX, 0);
+    display.setTextColor(SSD1306_WHITE);
+    display.print(text);
+
+    textX -= 1;
+
+    if (textX < -w)
+    {
+      textX = 128;
+    }
+
+    if (analogRead(tuneChannel1pot) > 0 && analogRead(tuneChannel1pot) < 300 && analogRead(tuneChannel2pot) > 900)
+    {
+      display.drawBitmap(channelplacy, channelplacX, channelArray[2], 25, 10, WHITE);
+      int curmil = millis();
+      if (curmil - premil >= interval)
+      {
+        premil = curmil;
+        display.drawBitmap(0, 0, meFrames[currentMeFrame], 128, 64, WHITE);
+        currentMeFrame++;
+        if (currentMeFrame == 14)
+        {
+          currentMeFrame = 0;
+        }
+      }
+      display.drawBitmap(5, 30, sigal, 128, 64, WHITE);
+    }
+    //Serial.println("test 11");
+    if (analogRead(tuneChannel1pot) > 300 && analogRead(tuneChannel1pot) < 450 && analogRead(tuneChannel2pot) > 900)
+    {
+
+      display.drawBitmap(channelplacy, channelplacX, channelArray[3], 25, 10, WHITE);
+
+      display.drawBitmap(posW / 2, posH / 2, girl, 128, 64, WHITE);
+    }
+
+    // channel 5
+    if (analogRead(tuneChannel1pot) > 450 && analogRead(tuneChannel1pot) < 650 && analogRead(tuneChannel2pot) > 900)
+    {
+      display.drawBitmap(channelplacy, channelplacX, channelArray[2], 25, 10, WHITE);
+      display.drawBitmap(posW / 2, posH / 2, cat, 128, 64, WHITE);
+      display.drawBitmap(5, 30, sigal, 128, 64, WHITE);
+    }
+
+
+    if (analogRead(tuneChannel1pot) > 600 && analogRead(tuneChannel1pot) < 960 && analogRead(tuneChannel2pot) > 900)
+    {
+
+      if (millis() - lastPeakUpdate >= peakUpdateInterval) {
+        if (peak1.available()) {
+          peakValue = peak1.read();
+        }
+            lastPeakUpdate = millis();
+          }
+  
+      lineCount = map(peakValue * 1000, 0, 1000, 5, 50); 
+      
+      for (int i = 0; i < lineCount; i++) {
+        int x1 = random(0, 128);
+        int y1 = random(0, 64);
+        int x2 = random(0, 128);
+        int y2 = random(0, 64);
+
+        display.drawLine(x1, y1, x2, y2, WHITE);
+      }
+        
+    }
+
+    
+
+    if (analogRead(tuneChannel1pot) > 960 && analogRead(tuneChannel1pot) < 1023 && analogRead(tuneChannel2pot) > 900)
+    {
+      display.drawBitmap(channelplacy, channelplacX, channelArray[2], 25, 10, WHITE);
+      display.drawBitmap(0, 0, maningamemaningame, 128, 64, WHITE);
+      display.drawBitmap(5, 30, sigal, 128, 64, WHITE);
+    }
+
+  }
+
+  if (toggelforarpscreen == 1) {
+    display.clearDisplay();
+    display.fillRect(0, 0, 128, 64, BLACK);
+    display.drawBitmap(0, 0, arpscreenarp_screen, 128, 64, WHITE);
+    display.setCursor(30, 11);
+    display.setTextColor(WHITE);
+    display.print("S&H rte");
+    createKnobBlack(pot4, 30, 50, 6);
+  }
+
+  display.display();
+
+  sampleCount = 0;
+}
+
+void mode2()
+{
+
+  currentTime = millis();
+
+  if (currentTime - lastStepTime >= tempoMapped)
+  {
+    lastStepTime = currentTime;
+
+    onStep();
+    checkOctave();
+  }
+
+  mode4OnStepnormal();
+
+  currentFrameCat = 0;
+  startupformode4 = 0;
+  currentFrame3 = 0;
+
+  
+
+  setMixerMode(2, mixerState);
+
+  // if (currentMode != newMode)
+  // {
+  //   savePotVal();
+  //   currentMode = newMode;
+  //   setPotValforModeSwitch(2);
+  // }
+
+  int samplePitchunmapped = analogRead(pot3);
+  int sampleTraversStartunmapped = analogRead(pot1);
+  int sampleTraversEndunmapped = analogRead(pot2);
+
+  samplePitch = map(samplePitchunmapped, 0, 1023, -12, 12);
+  sampleTraversStart = (map(sampleTraversStartunmapped, 0, 1023, 0, 99)) * 0.01;
+  sampleTraversEnd = (map(sampleTraversEndunmapped, 0, 1023, sampleTraversStart + 1, 99)) * 0.01;
+
+  int linePosXStart = map(sampleTraversStartunmapped, 0, 1023, 15, 128);
+  int linePosXEnd = map(sampleTraversEndunmapped, 0, 1023, linePosXStart + 16, 128);
+
+
+  samplePlayer.pitchShift(samplePitch);
+  samplePlayer.startPercent = sampleTraversStart;
+  samplePlayer.endPercent = sampleTraversEnd;
+
+
+  int mode2buttonstate = digitalRead(arpPin);
+
+  if (mode2buttonstate == LOW && prevmode2button == HIGH)
+  {
+    sampleNum++;
+    samplePlayer.stop();
+    if (sampleNum == 1)
+    {
+      sampleNum = 0;
+    }
+  }
+  prevmode2button = mode2buttonstate;
+
+  if (samplePlayer.isPlaying() != true)
+  {
+    Serial.print("Maximum audio memory used so far: ");
+    Serial.println(AudioMemoryUsageMax());
+
+    samplePlayer.loadFromSD("pad1.raw");
+    Serial.println("after sample");
+    samplePlayer.play();
+    //
+  }
+
+
+  display.clearDisplay();
+
+  display.drawBitmap(0, 0, mediaplayerallArray[0], 128, 64, WHITE);
+
+  display.fillRect(13, 29, 100, 10, WHITE);
+  display.drawLine(linePosXStart, 23, linePosXStart, 41, WHITE);
+  display.drawLine(linePosXEnd, 23, linePosXEnd, 41, WHITE);
+
+  createKnobBlack(pot1, 32, 12, 4);
+  createKnobBlack(pot2, 64, 12, 4);
+  createKnobBlack(pot3, 96, 12, 4);
+
+  display.display();
+}
+
+void mode3()
+{
+
+  mode3switchstate = digitalRead(arpPin);
+
+  if (mode3switchstate == LOW && mode3switchstateLast == HIGH)
+  {
+
+    mode3pot4switch = !mode3pot4switch;
+    displaynum = !displaynum;
+  }
+
+  mode3switchstateLast = mode3switchstate;
+
+  setMixerMode(3, mixerState);
+  startupformode4 = 0;
+  currentFrame3 = 0;
+  mode4OnStepnormal();
+
+  currentTime = millis();
+
+  waveform = analogRead(pot3);
+  potAttValue = analogRead(pot2);
+  spinSpeed = analogRead(pot1);
+
+  checkScale();
+
+  int speedmapped = map(spinSpeed, 0, 1023, 40, 100);
+
+  int craziness = map(analogRead(pot4), 0, 1023, 5, 64);
+  int density = map(analogRead(pot3), 0, 1023, 5, 50);
+  int framrate = map(analogRead(pot1), 0, 1023, 100, 500);
+
+  //display for random rythmn
+  if (displaynum == 1)
+  {
+    
+
+    for (int i = 0; i < 4; i++)
+    {
+      if (millis() - lastNoteTime[i] >= noteDuration[i])
+      {
+        randomSeqOnStep(potAttValue, waveform, i);
+        lastNoteTime[i] = millis();
+
+        int divisions[] = {1, 2, 4, 8, 16};
+        rhythmDivision[i] = divisions[random(0, 5)];
+        noteDuration[i] = checkTempo(pot1) / rhythmDivision[i];
+      }
+    }
+    
+
+    if(currentTime - lastframefortree >= checkTempo(pot1)) {
+      display.clearDisplay();
+      lastframefortree = currentTime;
+      int selectfilter = random(2);
+      
+
+      if (selectfilter == 0) {
+
+        display.drawBitmap(0, 0, treeinbayerallArray[currentFramefortree], 128, 64, WHITE);
+
+      }
+
+      else {
+
+        display.drawBitmap(0, 0, treeinbinaryallArray[currentFramefortree], 128, 64, WHITE);
+
+      }
+
+      currentFramefortree++;
+      if(currentFramefortree == 5) {
+        currentFramefortree = 0;
+      }
+
+      
+      drawMovingSquares(density, craziness);
+
+      display.display();
+    }
+
+    
+
+    
+    
+    
+  }
+
+  if (displaynum == 0)
+  {
+
+    if (currentTime - lastStepTime >= checkTempo(pot1))
+    {
+    lastStepTime = currentTime;
+
+    onStep(potAttValue, waveform);
+    }
+    //display for regualr spinning tv 
+    
+    createAnim(SPINNINGTVallArray, speedmapped, 90, 0, 0, 128, 64);
+
+    createKnobWhite(pot1, 16, 16, 5);
+    createKnobWhite(pot2, 112, 16, 5);
+    createKnobWhite(pot3, 16, 48, 5);
+    createKnobWhite(pot4, 112, 48, 5);
+    
+
+    
+
+
+    int edgenoiseintunmapped = analogRead(pot3);
+    int edgenoiseint = map(edgenoiseintunmapped, 0, 1023, 0, 32);
+    noiseEdge(edgenoiseint);
+
+    display.display();
+  }
+}
+
+void mode4()
+{
+
+  mixer9.gain(2, 1);
+  display.clearDisplay();
+
+  setMixerMode(4, mixerState);
+
+  currentTime = millis();
+//seqothermodesthrough
+  if (currentTime - lastStepTime >= checkTempo(pot1))
+  {
+    lastStepTime = currentTime;
+
+    onStep();
+    checkOctave();
+  }
+
+
+//tvload in animation
+  if (startupformode4 == 0)
+  {
+
+    int currentMillis2 = millis();
+
+    if (currentMillis2 - lastframe3 >= 100)
+    {
+
+      lastframe3 = currentMillis2;
+
+      display.clearDisplay();
+
+      display.drawBitmap(0, 0, TVZOOMallArray[currentFrame3], 128, 64, WHITE);
+      display.display();
+
+      currentFrame3++;
+
+      if (currentFrame3 == (17))
+      {
+        currentFrame3 = 0;
+        startupformode4 = 1;
+      }
+    }
+  }
+
+  
+
+  
+  
+
+  
+
+
+//afterstaertup
+  if (startupformode4 == 1)
+  {
+    //when delay is on
+    if (digitalRead(arpPin) == LOW)
+    {
+
+      display.clearDisplay();
+
+      
+      
+      display.drawBitmap(0, 0, catMeowpixil_frame_0, 128, 64, WHITE);
+      
+      createKnobWhite(pot3, 107, 18, 4);
+    \
+
+      if (DelayDW == 1)
+      {
+
+        createTextBubbleWhite("DELAY", 2, 0);
+      }
+
+      if (DelayDW == 0)
+      {
+
+        createTextBubbleWhite("OFF", 2, 0);
+      }
+
+      display.display();
+    }
+
+    //delaybuttonis not pressed
+
+    if (digitalRead(arpPin) == HIGH)
+    {
+
+      if (analogRead(pot2) > 500)
+      {
+        
+        display.drawBitmap(0, 0, gridmapgridMap, 128, 64, WHITE);
+        // start at 10Y x35
+        //Serial.println("test1");
+        for (int i = 10; i < 115; i += 5)
+        {
+          //Serial.println("test2");
+          int ranPointy = random(11, 50);
+          display.drawLine(i, 35, i, ranPointy, WHITE);
+        }
+        // display.drawLine(xforline+1, ranPointy, xforline, 35, WHITE);
+        
+      }
+
+      if (analogRead(pot2) < 500)
+      {
+
+        float distortionTVZoom = (float)analogRead(pot1) / 1000;
+        noise(girl, 1040, distortionTVZoom);
+        display.drawBitmap(0, 0, girl, 128, 64, WHITE);
+        float distortionTVZoom2 = (float)analogRead(pot2) / 1000;
+        noise(cat, 1040, distortionTVZoom2);
+        display.drawBitmap(32, 64, cat, 128, 64, BLACK);
+        
+      }
+      
+      static int xtracker1;
+      static int xtracker2;
+      static int xtarget;
+      static int xtarget2 = 96;
+      static int barnum = 0;
+      static int sampleforholdtime = 0;
+      static int toggelforknobs;
+
+
+      //hold button press logic
+      int togglebuttonstate = digitalRead(splashPin);
+
+      if(togglebuttonstate == LOW && LBSmode4menus == HIGH) {
+
+          sampleforholdtime = millis();
+        
+      }
+
+      if (togglebuttonstate == LOW && (millis() - sampleforholdtime >= 1000)) {
+
+        toggleState = !toggleState;
+
+        if (toggleState) {
+          moveBitmap = true;
+        }
+        else {
+          moveBitmap = false;
+        }
+      
+            xtracker1 = -32;
+            xtracker2 = 160;
+            barnum++;
+            if (barnum == 2) {
+              barnum = 0;
+            }
+
+      }      
+
+      LBSmode4menus = togglebuttonstate;
+
+      catframnum = !catframnum;
+
+
+
+
+
+      if (toggleState == 0) {
+
+      
+    //audio for scream
+      osc1f_unmap = analogRead(pot1);
+      osc2f_unmap = analogRead(pot2);
+      unmapped = analogRead(pot3);
+      mode4OnStep(osc1f_unmap, osc2f_unmap, unmapped);
+
+      }
+
+      if (toggleState == 1) {
+
+      
+      if(togglebuttonstate == LOW && LBSmode4knobs == HIGH) {
+
+          toggelforknobs = !toggelforknobs;
+        
+      }
+
+      LBSmode4knobs = togglebuttonstate;
+
+      mode4OnStepnormal();
+      
+      
+
+      if (toggelforknobs == 0) {
+
+        float vol1 = ((analogRead(pot1))/1023.0);
+        float vol2 = ((analogRead(pot2))/1023.0);
+        float vol3 = ((analogRead(pot3))/1023.0);
+        float vol4 = ((analogRead(pot4))/1023.0);
+
+        sine3.frequency(0.001);
+        sine3.amplitude(0.1);
+
+        sine6.frequency(0.001);
+        sine6.amplitude(0.1);
+
+        sine7.frequency(0.001);
+        sine7.amplitude(0.1);
+
+        mixer18.gain(0 , (vol1-0.2));
+        mixer18.gain(1 , (vol2-0.2));
+        mixer18.gain(2 , (vol3-0.2));
+        mixer18.gain(3 , (vol4-0.2));
+
+      }
+
+      if (toggelforknobs == 1) {
+
+        int voice1freqmapped = map(analogRead(pot1), 0 , 1023, 22, 1500);
+        int voice2freqmapped = map(analogRead(pot2), 0 , 1023, 22, 1500);
+        int voice3freqmapped = map(analogRead(pot3), 0 , 1023, 22, 1500);
+        
+
+
+        waveformMod4.frequency(voice1freqmapped);
+        waveformMod5.frequency(voice2freqmapped);
+        waveformMod6.frequency(voice3freqmapped);
+
+        int rateChaosunmapped = analogRead(pot4);
+        float rateChaos = map(rateChaosunmapped, 0, 1023, 5000, 100);
+        chaosnoise.rate(rateChaos);
+        if (analogRead(pot4) <= 500)
+        {
+          chaosnoise.mode(AudioSynthChaosNoise::CLASSIC);
+          mixer12.gain(1, 1);
+          mixer12.gain(0, 0);
+        }
+        if (analogRead(pot4) >= 501)
+        {
+          chaosnoise.mode(AudioSynthChaosNoise::BROKEN);
+          mixer12.gain(1, 1);
+          mixer12.gain(0, 0);
+        }
+        if (analogRead(pot4) <= 200)
+        {
+          mixer12.gain(1, 0);
+          mixer12.gain(0, 1);
+        }
+        
+
+      }
+
+     
+
+      
+
+    }
+    
+
+  
+
+      if (moveBitmap) {
+                      
+            if(millis() - tracker >= 20) {
+
+              tracker = millis();
+
+              xtracker1 += (xtarget - xtracker1) * 0.2;
+              xtracker2 += (xtarget2 - xtracker2) * 0.2;
+         
+              display.fillRect(xtracker1, 0, 32, 64, BLACK);
+              display.drawBitmap(xtracker1, 0, sidesofmode4allArray[0], 32, 64, WHITE);
+              createKnobWhite(pot1, xtracker1 + 15,  25, 5);
+              createKnobWhite(pot3, xtracker1 + 15,  51, 5);
+
+              display.fillRect(xtracker2, 0, 32, 64, BLACK);
+              display.drawBitmap(xtracker2, 0, sidesofmode4allArray[1], 32, 64, WHITE);
+              createKnobWhite(pot2, xtracker2 + 15,  25, 5);
+              createKnobWhite(pot4, xtracker2 + 15,  51, 5);
+              
+
+              if (toggelforknobs == 0) {
+              display.setCursor(xtracker1 + 3, 10);
+              display.setTextColor(WHITE);
+              display.print("amp1");
+              display.setTextColor(WHITE);
+              display.setCursor(xtracker1 + 3, 36);
+              display.print("amp2");
+
+              display.setCursor(xtracker2 + 6, 10);
+              display.setTextColor(WHITE);
+              display.print("amp3");
+              display.setTextColor(WHITE);
+              display.setCursor(xtracker2 + 6, 36);
+              display.print("nois");
+
+              }
+
+              if (toggelforknobs == 1) {
+
+                display.setCursor(xtracker1 + 3, 10);
+                display.setTextColor(WHITE);
+                display.print("fq:1");
+                display.setTextColor(WHITE);
+                display.setCursor(xtracker1 + 3, 36);
+                display.print("fq:2");
+
+                display.setCursor(xtracker2 + 6, 10);
+                display.setTextColor(WHITE);
+                display.print("fq:3");
+                display.setTextColor(WHITE);
+                display.setCursor(xtracker2 + 6, 36);
+                display.print("type");
+
+              }
+
+              if (abs(xtarget - xtracker1) < 1) {
+                  initiate = false;
+                }
+
+              if (abs(xtarget2 - xtracker2) < 1) {
+                    initiate = false;
+                  }
+
+            }
+        }
+      
+      display.display();
+
+    }
+
+
+
+      
+
+        
+  }
+
+
+}
+
+
+
+//LOOP
+void loop()
+{
+
+
+
+
+  if (startup == true)
+  { 
+
+    unsigned long startupcurrenttime = millis();
+
+    sgtl5000_1.volume(0.4);
+
+    mixer1.gain(0, 0.0);
+    mixer2.gain(0, 0.0);
+
+    mixer1.gain(1, 0.5);
+    mixer2.gain(1, 0.5);
+
+    if (!playSdWav2.isPlaying())
+    {
+      delay(2000);
+      mixer6.gain(0, 0.8);
+      mixer7.gain(0, 0.8);
+      playSdWav2.play("snFinishWorkout.wav");
+    }
+
+
+    if (endofscreenglitchbool == 0) {
+
+      for (int k = 0; k < 50; k++)
+        {
+          
+          display.clearDisplay();
+          display.drawBitmap(0, 0, noiseforintroallArray[k], 128, 64, WHITE);
+          display.display();
+          delay(50);
+          
+        }
+
+    }
+    
+    
+    endofscreenglitchbool = 1;
+    
+    while (digitalRead(arpPin) == HIGH || digitalRead(splashPin) == HIGH) {
+
+        startupcurrenttime = millis();
+
+        display.clearDisplay();
+        if (startupcurrenttime - pressthestartbuttonprev >= 300) {
+      
+              pressthestartbuttonprev = startupcurrenttime;
+              
+              if (jitter < 5) {
+                display.setCursor(35, 34);
+              }
+              if (jitter >= 5 && jitter <= 10) {
+                display.setCursor(37, 38);
+              }
+
+              if (jitter >= 11 && jitter <= 15) {
+                display.setCursor(39, 42);
+              }
+
+              if (jitter >= 16) {
+                display.setCursor(37, 38);
+              }
+
+              display.drawBitmap(5, 30, sigal, 128, 64, WHITE);
+              display.print("PRESS BUTTON");
+              jitter++;
+              display.display();
+
+              if (jitter == 20) {
+                jitter = 0;
+              }
+            }
+    
+    
+
+
+    }
+    
+    startup = false;
+    
+  }
+
+  
+  vol = analogRead(potVol);
+  volmap = map(vol, 0, 1023, 0, 80);
+  volmapcal = (float)volmap * 0.01;
+
+  sgtl5000_1.volume(volmapcal);
+
+  int sliderValue = analogRead(pot5Slider);
+  newMode = map(sliderValue, 0, 1023, 0, 4);
+
+  
+
+
+ 
+    
+   
+
+    //
+    //
+    //
+    // MODE ONE:
+    //
+    //
+    //
+    //
+    if (analogRead(pot5Slider) <= 204)
+    {
+
+      mode1();
+    }
+    //
+    //
+    //
+    //
+    // MODE TWO: gran/scrub
+    //
+    //
+    //
+    //
+    if (analogRead(pot5Slider) >= 205 && analogRead(pot5Slider) <= 409)
+    {
+
+      mode2();
+    }
+    //
+    //
+    //
+    //
+    // MODE THREE : chords
+    //
+    //
+    //
+    //
+    if (analogRead(pot5Slider) >= 410 && analogRead(pot5Slider) <= 614)
+    {
+
+      mode3();
+    }
+    //
+    //
+    // MODE FOUR : FM
+    //
+    //
+    //
+    if (analogRead(pot5Slider) >= 615 && analogRead(pot5Slider) <= 819)
+    {
+
+      mode4();
+    }
+    ///
+    //
+    //
+    // MIXER
+    //
+    //
+
+    if (analogRead(pot5Slider) > 820)
+    {
+
+      modeMixer();
+    }
+
+    
+
+
+}
